@@ -1,17 +1,39 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebForm.Contact" %>
+﻿<%@ Page Title="Contacto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebForm.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
+    <h3>Atención al Cliente.</h3>
     <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
+        Programacion III<br />
+        Pacheco, Av. Hipólito Yrigoyen 288<br />
+        <abbr title="Telefono">P:</abbr>
         425.555.0100
+         
     </address>
 
+    <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Online</h5>
+        <p class="card-text">Consultas sobre compras online.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Tiendas y empresa</h5>
+        <p class="card-text">Consultas sobre nuestras tiendas.</p>
+        <a href="#" class="btn btn-primary"> Ver que ponemos</a>
+      </div>
+    </div>
+  </div>
+</div>
+    <br> 
     <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        <strong>Support:</strong>   <a href="mailto:Support@example.com">OliveraDiaz@example.com</a><br />
+        
     </address>
 </asp:Content>
