@@ -3,13 +3,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
     <h3>Atención al Cliente.</h3>
-    <address>
-        Programacion III<br />
-        Pacheco, Av. Hipólito Yrigoyen 288<br />
-        <abbr title="Telefono">P:</abbr>
-        425.555.0100
-         
-    </address>
 
     <div class="row">
   <div class="col-sm-6">
@@ -32,8 +25,15 @@
   </div>
 </div>
     <br> 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">OliveraDiaz@example.com</a><br />
+     <address>
+         <p>
+        Programacion III<br />
+        Pacheco, Av. Hipólito Yrigoyen 288<br />
+        <abbr title="Telefono">T:</abbr>
+        Sin Telefono  <!--Quizas el tel se lo podamos quitar --> 
+        </p> 
+
+        <strong>Soporte:</strong>   <a href="mailto:Support@example.com">OliveraDiaz@example.com</a><br />
         
     </address>
 </asp:Content>
