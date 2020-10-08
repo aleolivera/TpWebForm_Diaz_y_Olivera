@@ -10,7 +10,7 @@
       <div class="card-body">
         <h5 class="card-title">Online</h5>
         <p class="card-text">Consultas sobre compras online.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Mail</a>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
         Programacion III<br />
         Pacheco, Av. Hipólito Yrigoyen 288<br />
         <abbr title="Telefono">T:</abbr>
-        Sin Telefono  <!--Quizas el tel se lo podamos quitar --> 
+        Sin Telefono  <!--Quizas el tel se lo podamos quitar o tambien cambiar el formato y hacer un formulario de contacto--> 
         </p> 
 
         <strong>Soporte:</strong>   <a href="mailto:Support@example.com">OliveraDiaz@example.com</a><br />
