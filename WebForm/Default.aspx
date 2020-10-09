@@ -52,8 +52,8 @@
                 <img src="<%=item.ImagenUrl %>" class="card-img-top" alt="alternative-text" width="280">
                 <div class="card-body">
                     <h5 class="card-title"><% = item.Nombre %></h5>
-                    <h5 class="card-title"><% = item.Precio %></h5>
-                    <a href="#" class="btn btn-primary">Agregalo!</a>
+                    <h5 class="card-title">$<% = item.Precio %></h5>
+                    <a href="#" class="btn btn-primary">Agregalo al carrito!</a>
                 </div>
             </div>
 
