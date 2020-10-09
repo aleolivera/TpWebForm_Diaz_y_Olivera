@@ -42,21 +42,24 @@
 
     <!--El codigo de arriba podriamos quitarlo porque es el que viene por defecto, desde div-->
 
-    <%foreach (Dominio.Articulos item in listaarticulo)
-        {%>
-    <div class="Conteiner">
 
-        <div class="card-columns">
-            <div class="card">
-                <img src="<%=item.ImagenUrl %>" class="card-img-top" alt="...">
+    <div class="row">
+        <%foreach (Dominio.Articulos item in listaarticulo)
+            {%>
+
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="<%=item.ImagenUrl %>" class="card-img-top" alt="alternative-text" width="280">
                 <div class="card-body">
-                    <h5 class="card-title"><%=item.Nombre %></h5>
-                   <%-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>--%>
+                    <h5 class="card-title"><% = item.Nombre %></h5>
+                    <h5 class="card-title"><% = item.Precio %></h5>
+                    <a href="#" class="btn btn-primary">Agregalo!</a>
                 </div>
             </div>
+
         </div>
+
+        <% } %>
     </div>
 
-
-    <%} %>
 </asp:Content>
