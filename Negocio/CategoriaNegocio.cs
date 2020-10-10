@@ -12,28 +12,39 @@ namespace Negocio
     {
         public List<Categoria> listar()
         {
-            SqlDataReader lector;
+            //SqlDataReader lector;
             List<Categoria> lista= new List<Categoria>();
-            SqlCommand comando = new SqlCommand();
-            SqlConnection conexion = new SqlConnection();
-
-            //comentamos y descomentamos para poder usar la base de datos local de cada uno
-            conexion.ConnectionString= "data source=ALE\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
-            //conexion.ConnectionString = "Data Source= DESKTOP-3EDAK3V\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi";
-            comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = "select * from CATEGORIAS";
-            comando.Connection = conexion;
-
-            conexion.Open();
-            lector = comando.ExecuteReader();
-
-            while (lector.Read())
+            //SqlCommand comando = new SqlCommand();
+            //SqlConnection conexion = new SqlConnection();
+            
+            AccesoDatos datos = new AccesoDatos();
+            datos.setearQuery("select * from CATEGORIAS");
+            datos.ejecutarLector();
+            while (datos.reader.Read())
             {
-                lista.Add(new Categoria ((int)lector["id"],(string)lector["Descripcion"]));
+                lista.Add(new Categoria((int)datos.reader["id"], (string)datos.reader["Descripcion"]));
 
             }
-            lector.Close();
-            conexion.Close();
+            datos.cerrarConexion();
+            
+
+            ////comentamos y descomentamos para poder usar la base de datos local de cada uno
+            //conexion.ConnectionString= "data source=ALE\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
+            ////conexion.ConnectionString = "Data Source= DESKTOP-3EDAK3V\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi";
+            //comando.CommandType = System.Data.CommandType.Text;
+            //comando.CommandText = "select * from CATEGORIAS";
+            //comando.Connection = conexion;
+
+            //conexion.Open();
+            //lector = comando.ExecuteReader();
+
+            //while (lector.Read())
+            //{
+            //    lista.Add(new Categoria ((int)lector["id"],(string)lector["Descripcion"]));
+
+            //}
+            //lector.Close();
+            //conexion.Close();
             return lista;
         }
 

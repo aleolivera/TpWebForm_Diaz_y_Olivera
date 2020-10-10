@@ -15,27 +15,37 @@ namespace Negocio
         public List<Marca> listar()
         {
             List<Marca> lista = new List<Marca>();
-            SqlConnection conexion = new SqlConnection();
-            SqlDataReader reader;
-            SqlCommand comando = new SqlCommand();
+            //SqlConnection conexion = new SqlConnection();
+            //SqlDataReader reader;
+            //SqlCommand comando = new SqlCommand();
 
-            //comentamos y descomentamos para poder usar la base de datos local de cada uno
-            conexion.ConnectionString = "data source=ALE\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
-            //conexion.ConnectionString = "Data Source= DESKTOP-3EDAK3V\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi";
-            comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = "select * from MARCAS";
-            comando.Connection = conexion;
+            AccesoDatos datos = new AccesoDatos();
 
-            conexion.Open();
-            reader = comando.ExecuteReader();
-
-            while (reader.Read())
+            datos.setearQuery("select * from MARCAS");
+            datos.ejecutarLector();
+            while (datos.reader.Read())
             {
-                lista.Add(new Marca((int)reader["id"],(string)reader["Descripcion"]));
+                lista.Add(new Marca((int)datos.reader["id"], (string)datos.reader["Descripcion"]));
             }
+            datos.cerrarConexion();
+
+            ////comentamos y descomentamos para poder usar la base de datos local de cada uno
+            //conexion.ConnectionString = "data source=ALE\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
+            ////conexion.ConnectionString = "Data Source= DESKTOP-3EDAK3V\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi";
+            //comando.CommandType = System.Data.CommandType.Text;
+            //comando.CommandText = "select * from MARCAS";
+            //comando.Connection = conexion;
+
+            //conexion.Open();
+            //reader = comando.ExecuteReader();
+
+            //while (reader.Read())
+            //{
+            //    lista.Add(new Marca((int)reader["id"],(string)reader["Descripcion"]));
+            //}
             
-            reader.Close();
-            conexion.Close();
+            //reader.Close();
+            //conexion.Close();
             return lista;
         }
     }

@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
 using Negocio;
+using System.Web.UI.HtmlControls;
 
 namespace WebForm
 {
@@ -19,6 +20,7 @@ namespace WebForm
             listaArticulos = aux.listar();
         }
 
+        
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
