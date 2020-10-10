@@ -20,8 +20,8 @@ namespace Negocio
             SqlCommand comando = new SqlCommand();
 
             //comentamos y descomentamos para poder usar la base de datos local de cada uno
-            //conexion.ConnectionString = "data source=ALE\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
-            conexion.ConnectionString = "Data Source= DESKTOP-3EDAK3V\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi";
+            conexion.ConnectionString = "data source=ALE\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
+            //conexion.ConnectionString = "Data Source= DESKTOP-3EDAK3V\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi";
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = "select * from MARCAS";
             comando.Connection = conexion;

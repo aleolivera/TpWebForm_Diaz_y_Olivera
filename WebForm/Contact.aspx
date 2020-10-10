@@ -4,7 +4,7 @@
     <h2><%: Title %>.</h2>
     <h3>Atención al Cliente.</h3>
 
-    <div class="row">
+<div class="row">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">

@@ -16,8 +16,8 @@ namespace Negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("Data Source= DESKTOP-3EDAK3V\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi");
-            //conexion = new SqlConnection("Data Source= ALE\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi");
+            //conexion = new SqlConnection("Data Source= DESKTOP-3EDAK3V\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi");
+            conexion = new SqlConnection("Data Source= ALE\\SQLEXPRESS; initial catalog= CATALOGO_DB;integrated security= sspi");
             comando = new SqlCommand();
             comando.Connection = conexion;
         }
