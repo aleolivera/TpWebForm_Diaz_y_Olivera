@@ -29,55 +29,56 @@ namespace Negocio
 
             AccesoDatos datos = new AccesoDatos();
             datos.setearQuery("Select A.ID,A.Codigo,A.Nombre,A.Descripcion,A.ImagenUrl,A.Precio, m.Descripcion Marcas, isnull(c.Descripcion,'Sin definir') Categoria from ARTICULOS A left join MARCAS m on m.Id=a.IdMarca left join CATEGORIAS c on c.Id=a.IdCategoria");
-            datos.ejecutarLector();
-            while (datos.reader.Read())
-            {
-                Articulos aux = new Articulos();
-                aux.Id = (int)datos.reader["ID"];
-                aux.Codigo = datos.reader.GetString(1);
-                aux.Nombre = datos.reader.GetString(2);
-                aux.Descripcion = datos.reader.GetString(3);
-                aux.ImagenUrl = (string)datos.reader["ImagenUrl"];
-                aux.Precio = datos.reader.GetSqlMoney(5);
-
-                aux.marca = new Marca();
-                aux.marca.descripcion = (string)datos.reader["Marcas"];
-                aux.categoria = new Categoria();
-                aux.categoria.descripcion = (string)datos.reader["Categoria"];
-                lista.Add(aux);
-
-            }
-            datos.cerrarConexion();
-            
-            
-            //comando.Connection = conexion;
-
-            //conexion.Open();
-            //lector = comando.ExecuteReader();
-
-            //while (lector.Read())
+            //datos.ejecutarLector();
+            //while (datos.reader.Read())
             //{
             //    Articulos aux = new Articulos();
-            //    aux.Id = (int)lector["ID"];
-            //    aux.Codigo = lector.GetString(1);
-            //    aux.Nombre = lector.GetString(2);
-            //    aux.Descripcion = lector.GetString(3);
-            //    aux.ImagenUrl = (string)lector["ImagenUrl"];
-            //    aux.Precio = lector.GetSqlMoney(5);
+            //    aux.Id = (int)datos.reader["ID"];
+            //    aux.Codigo = datos.reader.GetString(1);
+            //    aux.Nombre = datos.reader.GetString(2);
+            //    aux.Descripcion = datos.reader.GetString(3);
+            //    aux.ImagenUrl = (string)datos.reader["ImagenUrl"];
+            //    aux.Precio = datos.reader.GetSqlMoney(5);
 
             //    aux.marca = new Marca();
-            //    // aux.marca.ID =(int)lector["IdMarca"];
-            //    aux.marca.descripcion = (string)lector["Marcas"];
+            //    aux.marca.descripcion = (string)datos.reader["Marcas"];
             //    aux.categoria = new Categoria();
-            //    //aux.categoria.ID = (int)lector["IdCategoria"];
-            //    aux.categoria.descripcion = (string)lector["Categoria"];
-
+            //    aux.categoria.descripcion = (string)datos.reader["Categoria"];
             //    lista.Add(aux);
 
             //}
+            //datos.cerrarConexion();
 
-            //conexion.Close();
-            return lista;
+            //return lista;
+            try
+            {
+                datos.ejecutarLector();
+                while (datos.reader.Read())
+                {
+                    Articulos aux = new Articulos();
+                    aux.Id = (int)datos.reader["ID"];
+                    aux.Codigo = datos.reader.GetString(1);
+                    aux.Nombre = datos.reader.GetString(2);
+                    aux.Descripcion = datos.reader.GetString(3);
+                    aux.ImagenUrl = (string)datos.reader["ImagenUrl"];
+                    aux.Precio = datos.reader.GetSqlMoney(5);
+
+                    aux.marca = new Marca();
+                    aux.marca.descripcion = (string)datos.reader["Marcas"];
+                    aux.categoria = new Categoria();
+                    aux.categoria.descripcion = (string)datos.reader["Categoria"];
+                    lista.Add(aux);
+
+                }
+                datos.cerrarConexion();
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
         
         public void Agregar(Articulos nuevo)
