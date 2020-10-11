@@ -47,6 +47,7 @@
                     <h5 class="card-title"><% = item.Nombre %></h5>
                     <h5 class="card-title">$<% = item.Precio %></h5>
                     <a href="#" class="btn btn-primary">Agregalo al carrito!</a>
+                    <a href="#" class="btn btn-primary">Ver Detalle!</a>
                 </div>
             </div>
 
