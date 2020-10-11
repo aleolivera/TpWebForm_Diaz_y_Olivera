@@ -24,7 +24,7 @@ namespace WebForm
                 detalle = listaAux.Find(i => i.Id == idart);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
                 Response.Redirect("Error.aspx");
