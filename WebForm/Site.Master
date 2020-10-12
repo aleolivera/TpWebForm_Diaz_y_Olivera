@@ -12,7 +12,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <%--<webopt:BundleReference runat="server" Path="~/Content/css" />--%>
+   <%-- <webopt:BundleReference runat="server" Path="~/Content/css" />--%>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -41,6 +41,8 @@
         </asp:ScriptManager>--%>
 
 
+
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Nombre App</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,22 +50,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                   
+
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         |
                         <li><a runat="server" href="~/About">About</a></li>
                         |
                         <li><a runat="server" href="~/Contact">Contacto</a></li>
+
+                        
                     </ul>
                 </div>
             </div>
 
         </nav>
 
-        <%-- <MENU ANTERIOR, SE PUEDE BORRAR">
+        <!-- <MENU ANTERIOR, SE PUEDE BORRAR"-->
 
-        <%-- <div class="navbar navbar-inverse navbar-fixed-top">
+        <%-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -82,7 +87,10 @@
                 </div>
 
             </div>
-        </div>--%>
+        </div>
+            </nav>--%>
+
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
