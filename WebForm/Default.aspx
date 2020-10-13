@@ -10,12 +10,22 @@
     </div>
 
     <div class="input-group mb-3">
-         <input type="text" class="form-control" placeholder="Articulo" aria-label="Recipient's username" aria-describedby="button-addon2" onkeypress=""/>
-            <div class="input-group-append">
-              
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
-            </div>
+        <input type="Search" class="form-control" placeholder="Articulo" aria-label="Recipient's username" aria-describedby="button-addon2" onkeypress="" list="listaarticulos" />
+        <div class="input-group-append">
+
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+
+        </div>
+        <datalist id="listaarticulos">
+            <%foreach (var articulos in listaarticulo)
+                {%>
+
+            <option value=" <% =articulos.Nombre.ToString()%>">
+
+                <%}%>
+        </datalist>
     </div>
+
 
     <%--<div class="row">
         <div class="col-md-4">
@@ -59,12 +69,12 @@
             <div class="card" style="width: 18rem;">
                 <img src="<%=item.ImagenUrl %>" class="card-img-top" alt="alternative-text" width="280">
                 <div class="card-body">
-                    <h5 class="card-title">Precio:<% = item.Nombre %></h5>
+                    <h5 class="card-title"><% = item.Nombre %></h5>
                     <h5 class="card-title">$<% = item.Precio %></h5>
                     <a href="#" class="btn btn-primary">Agregalo al carrito!</a>
-                     <!--<a href="#" class="btn btn-secondary">Detalle!</a>-->
-                    <a href= "Detalle.aspx?idArticulo= <%= item.Id.ToString()%>" class="btn btn-primary">Detalle!</a>
-                    
+                    <!--<a href="#" class="btn btn-secondary">Detalle!</a>-->
+                    <a href="Detalle.aspx?idArticulo= <%= item.Id.ToString()%>" class="btn btn-primary">Detalle!</a>
+
                 </div>
             </div>
 
