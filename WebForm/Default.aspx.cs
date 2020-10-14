@@ -17,5 +17,6 @@ namespace WebForm
             ArticulosNegocio negocio = new ArticulosNegocio();
             listaarticulo = negocio.listar();
         }
+
     }
 }

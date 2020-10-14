@@ -3,5 +3,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
     
+    
+    <asp:Label ID="lblCarrito" runat="server" Text="Nada"></asp:Label>
+    
    
 </asp:Content>
