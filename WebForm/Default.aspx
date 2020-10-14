@@ -81,7 +81,7 @@
                     <h5 class="card-title"><% = item.Nombre %></h5>
                     <h5 class="card-title">$<% = item.Precio %></h5>
                     <a href="/about.aspx?idArticulo=<% = item.Id.ToString() %>" class="btn btn-primary">Agregalo al carrito!</a>
-
+                    <%--<asp:Button ID="BtnAgregar" runat="server" Text="Agregar" value="<% = item.Id.ToString() %>" />--%>
 
                     <!--<a href="#" class="btn btn-secondary">Detalle!</a>-->
                     <a href="Detalle.aspx?idArticulo= <%= item.Id.ToString()%>" class="btn btn-primary">Detalle!</a>

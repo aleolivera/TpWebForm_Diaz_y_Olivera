@@ -19,6 +19,11 @@ namespace WebForm
             listaarticulo = negocio.listar();
         }
 
+        protected void BtnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //EVENTO CLICK PARA REVISAR
 
         //protected void btnBuscar_Click(object sender, EventArgs e)
@@ -39,7 +44,7 @@ namespace WebForm
 
         //    }
 
-            
+
         //}
     }
 }

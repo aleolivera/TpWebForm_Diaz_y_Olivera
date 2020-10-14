@@ -11,16 +11,28 @@ namespace WebForm
 { 
     public partial class About : Page
     {
+        public Articulos articuloNuevo { get; set; }
         public List<Articulos> carrito = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticulosNegocio auxNegocio = new ArticulosNegocio();
-            Articulos auxArticulo = new Articulos();
-            
-            if (carrito == null)
+
+            try
             {
-                lblCarrito.Text = "No se ha agregado ningun articulo al carrito";
+                
+                
+                if (carrito == null)
+                {
+                    lblCarrito.Text = "No se ha agregado ningun articulo al carrito";
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+            
         }
     }
 }
