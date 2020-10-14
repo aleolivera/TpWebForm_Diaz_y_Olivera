@@ -26,6 +26,15 @@
         </datalist>
     </div>
 
+  <%--  DEJO COMENTADO EL CODIGO DEL BUSCADOR PARA QUE LO PUEDAS VER, ES SOLO EL DE ABAJO PORQUE GENERA EL ONCLICK--%> 
+
+   <%--  <div>
+    <asp:TextBox ID="txtArticulo" runat="server" TextMode="Search"
+        CausesValidation="True"/>
+    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/>
+    </div>--%>
+
+    
 
     <%--<div class="row">
         <div class="col-md-4">
