@@ -84,7 +84,7 @@
                     <%--<asp:Button ID="BtnAgregar" runat="server" Text="Agregar" value="<% = item.Id.ToString() %>" />--%>
 
                     <!--<a href="#" class="btn btn-secondary">Detalle!</a>-->
-                    <a href="Detalle.aspx?idArticulo= <%= item.Id.ToString()%>" class="btn btn-primary">Detalle!</a>
+                    <a href="Detalle.aspx?IDArticulo= <%= item.Id.ToString()%>" class="btn btn-primary">Detalle!</a>
 
                 </div>
             </div>

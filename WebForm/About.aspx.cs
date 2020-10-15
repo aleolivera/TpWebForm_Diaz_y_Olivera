@@ -15,24 +15,54 @@ namespace WebForm
         public List<Articulos> carrito = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticulosNegocio auxNegocio = new ArticulosNegocio();
+            int IDArticulo = Convert.ToInt32(Request.QueryString["IDArticulo"]);
 
-            try
+            if (IDArticulo!=0)
             {
-                
-                
-                if (carrito == null)
+                try
                 {
-                    lblCarrito.Text = "No se ha agregado ningun articulo al carrito";
-                }
-            }
-            catch (Exception)
-            {
 
-                throw;
+                    carrito = new List<Articulos>();
+                    articuloNuevo = new Articulos();
+                    ArticulosNegocio auxNegocio = new ArticulosNegocio();
+                    articuloNuevo = auxNegocio.listar().Find(i => i.Id == IDArticulo);
+
+                    if (Session["carrito"] != null)
+                    {
+                        carrito = (List<Articulos>)Session["carrito"];
+                    }
+                   
+                    carrito.Add(articuloNuevo);
+                    Session.Add("carrito", carrito);
+                    lblCarrito.Text = "Su Compra: ";
+                }
+                catch (Exception ex)
+                {
+                    Response.Redirect("/error.aspx");
+                    throw ex;
+                }
+
             }
-            
-            
+            else
+            {
+                try
+                {
+                    
+                    carrito = (List<Articulos>)Session["carrito"];
+                    lblCarrito.Text = "Su Compra: ";
+                }
+                catch (Exception ex)
+                {
+                    Response.Redirect("/error.aspx");
+                    throw ex;
+                }
+                
+            }
+
+            //ArticulosNegocio negocio = new ArticulosNegocio();
+            //carrito = negocio.listar();
+
+
         }
     }
 }
