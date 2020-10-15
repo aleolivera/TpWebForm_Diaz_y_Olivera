@@ -21,10 +21,10 @@
             <tbody>
                 <tr>
                     <%--<th scope="row">1</th>--%>
-                    <td><img src="<%=item.ImagenUrl %>" alt="<%=item.ImagenUrl %>" width="150" height="150"></td>
+                    <td><img src="<%=item.ImagenUrl %>" alt="<%=item.ImagenUrl %>" width="100" height="100"></td>
                     <td><%=item.Nombre %></td>
                     <td><%=item.Precio %></td>
-                    
+                    <td><a href="/about.aspx?idArticulo=<% = item.Id.ToString() %>&quitar=<%= 1.ToString() %> " class="btn btn-primary">Quitar</a></td>
                </tr>
            </tbody>   
 
