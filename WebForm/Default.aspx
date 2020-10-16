@@ -31,7 +31,8 @@
 
    <div>
     <asp:TextBox ID="txtArticulo" name= "art" runat="server" TextMode="Search" list="listaarticulos"
-        CausesValidation="False" AutoCompleteType="None" />
+        CausesValidation="False" AutoCompleteType="None" Width="800" />
+       <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/>
          </div>
     <div>
 
@@ -50,9 +51,9 @@
                 </select>
         </datalist>
     </div>
-    <div>
+   <%-- <div>
     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/>
-    </div>
+    </div>--%>
 
    
 
