@@ -9,11 +9,12 @@
         <p><a href="/contact" class="btn btn-primary btn-lg">Contactanos &raquo;</a></p>
     </div>
 
-    <div class="input-group mb-3">
+    <%--<div class="input-group mb-3">
         <input type="Search" class="form-control" placeholder="Articulo" aria-label="Recipient's username" aria-describedby="button-addon2" onkeypress="" list="listaarticulos" />
         <div class="input-group-append">
 
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            <%--<button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>--%>
+       <%--<asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/>
 
         </div>
         <datalist id="listaarticulos">
@@ -24,15 +25,27 @@
 
                 <%}%>
         </datalist>
-    </div>
+    </div>--%>
 
   <%--  DEJO COMENTADO EL CODIGO DEL BUSCADOR PARA QUE LO PUEDAS VER, ES SOLO EL DE ABAJO PORQUE GENERA EL ONCLICK--%> 
 
-   <%--  <div>
-    <asp:TextBox ID="txtArticulo" runat="server" TextMode="Search"
+   <div>
+    <asp:TextBox ID="txtArticulo" runat="server" TextMode="Search" list="listaarticulos"
         CausesValidation="True"/>
+         </div>
+    <div>
+        <datalist id="listaarticulos">
+            <%foreach (var articulos in listaarticulo)
+                {%>
+            <a href="Detalle.aspx?IDArticulo= <%= articulos.Id.ToString()%>" </a>
+            <option value=" <% =articulos.Nombre.ToString()%>">
+
+               <%}%>
+        </datalist>
+    </div>
+    <div>
     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/>
-    </div>--%>
+    </div>
 
    
 

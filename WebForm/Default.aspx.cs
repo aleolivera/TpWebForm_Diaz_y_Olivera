@@ -26,25 +26,27 @@ namespace WebForm
 
         //EVENTO CLICK PARA REVISAR
 
-        //protected void btnBuscar_Click(object sender, EventArgs e)
-        //{
-        //    ArticulosNegocio negocio = new ArticulosNegocio();
-        //    List<Articulos> listaAux;
-        //    try
-        //    {
-        //        listaAux = negocio.listar();
-        //        int idArticulo = Convert.ToInt32(txtArticulo.Text);
-        //        int idart = Convert.ToInt32(Request.QueryString["idArticulo"]);
-        //        busqueda = listaAux.Find(i => i.Id == idart);
-        //        Response.Redirect("Default.aspx?idArticulo=" + busqueda);
-        //    }
-        //    catch (Exception)
-        //    {
-        //        Response.Redirect("Error.aspx");
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ArticulosNegocio negocio = new ArticulosNegocio();
+            List<Articulos> listaAux;
+            try
+            {
+                listaAux = negocio.listar();
+                //int idArticulo = Convert.ToInt32(txtArticulo.Text);
+                int idArticulo = listaAux.Find(i => i.Nombre.ToLower().Contains(txtArticulo.Text.ToLower())).Id;
+                
+               
+                Response.Redirect("Detalle.aspx?idArticulo=" + idArticulo.ToString());
+            }
+            catch (Exception ex)
+            {
+                //Response.Redirect("Error.aspx");
+                throw ex;
 
-        //    }
+            }
 
 
-        //}
+        }
     }
 }
