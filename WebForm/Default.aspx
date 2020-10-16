@@ -3,6 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
 
+
     <div class="jumbotron">
         <h1>TUSHOPPING.COM</h1>
         <p class="lead">En TUSHOPPING.COM encontrarás el articulo de electronica que buscas, al mejor precio y de la mejor calidad. Si queres saber mas de nosotros </p>
@@ -31,13 +32,11 @@
 
    <div>
     <asp:TextBox ID="txtArticulo" name= "art" runat="server" TextMode="Search" list="listaarticulos"
-        CausesValidation="False" AutoCompleteType="None" Width="800" />
-       <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/>
+        CausesValidation="False" AutoCompleteType="None" Width="980" />
+       <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="btnBuscar_Click" BorderColor="Black" />
          </div>
+
     <div>
-
-
-
         <datalist id="listaarticulos">
             <select name="art">
             <%foreach (var articulos in listaarticulo)
@@ -51,12 +50,7 @@
                 </select>
         </datalist>
     </div>
-   <%-- <div>
-    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/>
-    </div>--%>
-
-   
-
+ 
 
     <div class="row">
         <%foreach (Dominio.Articulos item in listaarticulo)

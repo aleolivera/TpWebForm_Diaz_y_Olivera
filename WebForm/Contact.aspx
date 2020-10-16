@@ -10,11 +10,11 @@
       <div class="card-body">
         <h5 class="card-title">Online</h5>
         <p class="card-text">Consultas sobre compras online.</p>
-        <a href="#" class="btn btn-primary">Mail</a>
+        <a href="https://github.com/aleolivera/TpWebForm_Diaz_y_Olivera" class="btn btn-primary">Github</a>
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+  <%--<div class="col-sm-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Tiendas y empresa</h5>
@@ -22,7 +22,7 @@
         <a href="#" class="btn btn-primary"> Ver que ponemos</a>
       </div>
     </div>
-  </div>
+  </div>--%>
 </div>
     <br> 
      <address>
