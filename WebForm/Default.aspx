@@ -30,17 +30,24 @@
   <%--  DEJO COMENTADO EL CODIGO DEL BUSCADOR PARA QUE LO PUEDAS VER, ES SOLO EL DE ABAJO PORQUE GENERA EL ONCLICK--%> 
 
    <div>
-    <asp:TextBox ID="txtArticulo" runat="server" TextMode="Search" list="listaarticulos"
-        CausesValidation="True"/>
+    <asp:TextBox ID="txtArticulo" name= "art" runat="server" TextMode="Search" list="listaarticulos"
+        CausesValidation="False" AutoCompleteType="None" />
          </div>
     <div>
+
+
+
         <datalist id="listaarticulos">
+            <select name="art">
             <%foreach (var articulos in listaarticulo)
                 {%>
-            <a href="Detalle.aspx?IDArticulo= <%= articulos.Id.ToString()%>" </a>
+            
             <option value=" <% =articulos.Nombre.ToString()%>">
+                
+                <a href="Detalle.aspx?IDArticulo= <%= articulos.Id.ToString()%>" </a>
 
                <%}%>
+                </select>
         </datalist>
     </div>
     <div>
