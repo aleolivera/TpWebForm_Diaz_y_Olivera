@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
 using Negocio;
+using System.Data.SqlClient;
+using WebGrease;
 
 namespace WebForm
 { 
@@ -17,9 +19,11 @@ namespace WebForm
         {
             lblCarrito.Text = "Su Compra: ";
             int IDArticulo = Convert.ToInt32(Request.QueryString["IDArticulo"]);
-            int quitar = Convert.ToInt32(Request.QueryString["quitar"]);
-            if (IDArticulo!=0 && quitar==0)
-            {
+            //int quitar = Convert.ToInt32(Request.QueryString["quitar"]);
+            bool quitar = Convert.ToBoolean(Request.QueryString["quitar"]);
+            //if (IDArticulo!=0 && quitar==false)
+                if (IDArticulo != 0 && !quitar)
+                {
                 try
                 {
 
@@ -44,7 +48,7 @@ namespace WebForm
                 }
 
             }
-            else if(quitar==1)
+            else if(quitar)
             {
                 try
                 {
@@ -83,7 +87,7 @@ namespace WebForm
                 {
                     
                     carrito = (List<Articulos>)Session["carrito"];
-                    lblCarrito.Text = "Su Compra: ";
+                    lblCarrito.Text = "Carrito de compras vacio ";
                 }
                 catch (Exception)
                 {
@@ -97,6 +101,12 @@ namespace WebForm
             //carrito = negocio.listar();
 
 
+        }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            Session.Add("carrito", new List<Articulos>());
+            Response.Redirect("About.aspx");
         }
     }
 }

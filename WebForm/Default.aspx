@@ -32,10 +32,10 @@
 
    <div>
     <asp:TextBox ID="txtArticulo" name= "art" runat="server" TextMode="Search" list="listaarticulos"
-        CausesValidation="False" AutoCompleteType="None" Width="980" />
-       <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="btnBuscar_Click" BorderColor="Black" />
-         </div>
-
+        CausesValidation="False" AutoCompleteType="None" Width="980" style="padding: 8px 12px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" />
+       <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="btnBuscar_Click" class="btn btn-primary" BorderColor="" />
+   </div>    
+    <br>
     <div>
         <datalist id="listaarticulos">
             <select name="art">
