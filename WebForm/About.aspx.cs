@@ -21,8 +21,15 @@ namespace WebForm
             int IDArticulo = Convert.ToInt32(Request.QueryString["IDArticulo"]);
             //int quitar = Convert.ToInt32(Request.QueryString["quitar"]);
             bool quitar = Convert.ToBoolean(Request.QueryString["quitar"]);
+
+            if (Session ["carrito"]==null)
+            {
+                Session.Add("carrito", new List<Articulos>());
+
+            }
+
             //if (IDArticulo!=0 && quitar==false)
-                if (IDArticulo != 0 && !quitar)
+            if (IDArticulo != 0 && !quitar)
                 {
                 try
                 {
