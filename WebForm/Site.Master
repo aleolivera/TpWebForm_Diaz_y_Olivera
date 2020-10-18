@@ -21,7 +21,7 @@
 
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">TuShopping</a>
+            <a class="navbar-brand" href="#"><img src="https://i.ibb.co/LS1MpPd/logo-Proyecto.png" alt="Logo principal"  width="60" height="60"/></a>
 
             
   <%--<a class="navbar-brand" href="#">
@@ -38,16 +38,16 @@
                 <div class="navbar-nav">
 
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" style="font-size:30px; font-weight:500; align-content:center;" href="~/">Home</a></li>
                     </ul>
 
                     <ul>
-                        <li><a runat="server" href="~/Carro">Carro</a></li>
+                        <li><a runat="server" style="font-size:30px; font-weight:300; align-content:center;padding: 14px 15px;" href="~/Carro">Carro</a></li>
                     </ul>
                     <ul>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>
-
+                        <li><a runat="server" style="font-size:30px; font-weight:300; align-content:center;padding: 14px 15px;" href="~/Contact">Contacto</a></li>
                     </ul>
+
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Diaz-Olivera Application</p>
             </footer>
         </div>
 

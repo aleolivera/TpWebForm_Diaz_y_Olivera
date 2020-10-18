@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -30,14 +32,15 @@ namespace WebForm
         {
             ArticulosNegocio negocio = new ArticulosNegocio();
             List<Articulos> listaAux;
+            
+
             try
             {
                 listaAux = negocio.listar();
                 //int idArticulo = Convert.ToInt32(txtArticulo.Text);
-                int idArticulo = listaAux.Find(i => i.Nombre.ToLower().Contains(txtArticulo.Text.ToLower())).Id;
+                int ID = listaAux.Find(i => i.Nombre.ToLower().Contains(txtArticulo.Text.ToLower())).Id;
                 
-               
-                Response.Redirect("Detalle.aspx?idArticulo=" + idArticulo.ToString());
+                Response.Redirect("Detalle.aspx?idArticulo=" + ID.ToString());
             }
             catch (Exception ex)
             {

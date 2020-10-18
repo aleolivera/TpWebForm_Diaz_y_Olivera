@@ -47,7 +47,7 @@
                 <a href="Detalle.aspx?IDArticulo= <%= articulos.Id.ToString()%>" </a>
 
                <%}%>
-                </select>
+            </select>
         </datalist>
     </div>
  

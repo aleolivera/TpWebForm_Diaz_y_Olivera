@@ -18,8 +18,8 @@ namespace WebForm
         protected void Page_Load(object sender, EventArgs e)
         {
             lblCarrito.Text = "Su Compra: ";
+            carrito = new List<Articulos>();
             int IDArticulo = Convert.ToInt32(Request.QueryString["IDArticulo"]);
-            //int quitar = Convert.ToInt32(Request.QueryString["quitar"]);
             bool quitar = Convert.ToBoolean(Request.QueryString["quitar"]);
 
             if (Session ["carrito"]==null)
@@ -28,21 +28,21 @@ namespace WebForm
 
             }
 
-            //if (IDArticulo!=0 && quitar==false)
+            
             if (IDArticulo != 0 && !quitar)
                 {
                 try
                 {
 
-                    carrito = new List<Articulos>();
+                    //carrito = new List<Articulos>();
                     articuloNuevo = new Articulos();
                     ArticulosNegocio auxNegocio = new ArticulosNegocio();
                     articuloNuevo = auxNegocio.listar().Find(i => i.Id == IDArticulo);
 
-                    if (Session["carrito"] != null)
-                    {
+                    //if (Session["carrito"] != null)
+                    //{
                         carrito = (List<Articulos>)Session["carrito"];
-                    }
+                    //}
                    
                     carrito.Add(articuloNuevo);
                     Session.Add("carrito", carrito);
@@ -60,15 +60,15 @@ namespace WebForm
                 try
                 {
 
-                    carrito = new List<Articulos>();
+                    //carrito = new List<Articulos>();
                     articuloNuevo = new Articulos();
                     ArticulosNegocio auxNegocio = new ArticulosNegocio();
                     articuloNuevo = auxNegocio.listar().Find(i => i.Id == IDArticulo);
                     
-                    if (Session["carrito"] != null)
-                    {
+                    //if (Session["carrito"] != null)
+                    //{
                         carrito = (List<Articulos>)Session["carrito"];
-                    }
+                    //}
 
                     foreach (Articulos item in carrito)
                     {
