@@ -11,25 +11,25 @@ namespace WebForm
 {
 
 
-    public partial class _Default
+    public partial class About
     {
 
         /// <summary>
-        /// txtArticulo control.
+        /// lblCarrito control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArticulo;
+        protected global::System.Web.UI.WebControls.Label lblCarrito;
 
         /// <summary>
-        /// Button1 control.
+        /// btnComprar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnComprar;
     }
 }

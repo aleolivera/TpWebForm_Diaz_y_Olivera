@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Carrito de compras" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="WebForm.About" %>
+﻿<%@ Page Title="Carrito de compras" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Carro.aspx.cs" Inherits="WebForm.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <br/>
@@ -30,7 +30,7 @@
                     <td><img src="<%=item.ImagenUrl %>" alt="<%=item.ImagenUrl %>" width="100" height="100"></td>
                     <td style="font-size:20px"><%=item.Nombre %></td>
                     <td style="font-size:20px"><%=item.Precio %></td>
-                    <td style="font-size:20px"><a href="/about.aspx?idArticulo=<% = item.Id.ToString() %>&quitar=<%= true.ToString() %> " class="btn btn-primary">Quitar</a></td>
+                    <td style="font-size:20px"><a href="/Carro.aspx?idArticulo=<% = item.Id.ToString() %>&quitar=<%= true.ToString() %> " class="btn btn-primary">Quitar</a></td>
                </tr>
            </tbody>   
 

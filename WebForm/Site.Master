@@ -21,8 +21,14 @@
 
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">TuShopping</a>
 
-            <a class="navbar-brand" href="#">Nombre App</a>
+            
+  <%--<a class="navbar-brand" href="#">
+    <img src="C:\Users\ailen\OneDrive\Desktop\Imagenlogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    TuShopping
+  </a>--%>
+
 
             <%--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,7 +42,7 @@
                     </ul>
 
                     <ul>
-                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Carro">Carro</a></li>
                     </ul>
                     <ul>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>

@@ -26,7 +26,7 @@
             <h3 class ="display-4" = ><% = detalle.Nombre %></h3>
             <p class ="lead =" >Precio: $<% = detalle.Precio %></p>
             <div class="card-body">
-            <a href="/about.aspx?idArticulo=<% = detalle.Id.ToString() %>" class="btn btn-primary">Agregalo al carrito!</a>
+            <a href="/Carro.aspx?idArticulo=<% = detalle.Id.ToString() %>" class="btn btn-primary">Agregalo al carrito!</a>
                 
   </div>
 </div>

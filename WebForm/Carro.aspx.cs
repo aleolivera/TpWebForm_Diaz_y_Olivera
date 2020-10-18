@@ -77,7 +77,7 @@ namespace WebForm
                         {
                             carrito.Remove(item);
                             Session.Add("carrito", carrito);
-                            Response.Redirect("About.aspx");
+                            Response.Redirect("Carro.aspx");
                         }
                     }
                     
@@ -113,7 +113,7 @@ namespace WebForm
         protected void btnComprar_Click(object sender, EventArgs e)
         {
             Session.Add("carrito", new List<Articulos>());
-            Response.Redirect("About.aspx");
+            Response.Redirect("Carro.aspx");
         }
     }
 }
