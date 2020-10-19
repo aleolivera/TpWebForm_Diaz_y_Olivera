@@ -4,31 +4,11 @@
 
 
 
-    <div class="jumbotron">
-        <h1>TUSHOPPING.COM</h1>
-        <p class="lead">En TUSHOPPING.COM encontrarás el articulo de electronica que buscas, al mejor precio y de la mejor calidad. Si queres saber mas de nosotros </p>
+    <div class="jumbotron" style="background-image: url(https://news.sap.com/wp-content/blogs.dir/1/files/275273_275273_l_srgb_s_gl_F.jpg);">
+        <h1 style="color:white; background-color:black;opacity:0.7;">TUSHOPPING.COM</h1>
+        <p class="lead" style="color:white; background-color:black; opacity:0.7; font-weight:500;">En TUSHOPPING.COM encontrarás el articulo de electronica que buscas, al mejor precio y de la mejor calidad. Si queres saber mas de nosotros </p>
         <p><a href="/contact" class="btn btn-primary btn-lg">Contactanos &raquo;</a></p>
     </div>
-
-    <%--<div class="input-group mb-3">
-        <input type="Search" class="form-control" placeholder="Articulo" aria-label="Recipient's username" aria-describedby="button-addon2" onkeypress="" list="listaarticulos" />
-        <div class="input-group-append">
-
-            <%--<button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>--%>
-       <%--<asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/>
-
-        </div>
-        <datalist id="listaarticulos">
-            <%foreach (var articulos in listaarticulo)
-                {%>
-
-            <option value=" <% =articulos.Nombre.ToString()%>">
-
-                <%}%>
-        </datalist>
-    </div>--%>
-
-  <%--  DEJO COMENTADO EL CODIGO DEL BUSCADOR PARA QUE LO PUEDAS VER, ES SOLO EL DE ABAJO PORQUE GENERA EL ONCLICK--%> 
 
    <div>
     <asp:TextBox ID="txtArticulo" name= "art" runat="server" TextMode="Search" list="listaarticulos"
@@ -36,20 +16,20 @@
        <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="btnBuscar_Click" class="btn btn-primary" BorderColor="" />
    </div>    
     <br>
-    <div>
+    <%--<div>
         <datalist id="listaarticulos">
             <select name="art">
             <%foreach (var articulos in listaarticulo)
                 {%>
             
-            <option value=" <% =articulos.Nombre.ToString()%>">
+            <option><%=articulos.Nombre.ToString()%></option>
                 
                 <a href="Detalle.aspx?IDArticulo= <%= articulos.Id.ToString()%>" </a>
 
                <%}%>
             </select>
         </datalist>
-    </div>
+    </div>--%>
  
 
     <div class="row">
